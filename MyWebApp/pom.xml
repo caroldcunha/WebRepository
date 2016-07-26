@@ -18,4 +18,15 @@
   <build>
     <finalName>MyWebApp</finalName>
   </build>
+  
+  <plugin>
+   <groupId>org.apache.maven.plugins</groupId>
+   <artifactId>maven-surefire-plugin</artifactId>
+   <configuration>
+       <environmentVariables>
+           <jenkins.buildUrl>${env.BUILD_URL}</jenkins.buildUrl>
+       </environmentVariables>
+   </configuration>
+</plugin>
+
 </project>
